@@ -3,20 +3,58 @@
 {% block title %}Acceuil{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-</style>
+<h1>Résultats de recherche</h1>
 
-<body>
-    <div class="example-wrapper">
-        <div style="display: flex; justify-content: right; margin: 1em auto">
-            <h1>Acceuil</h1>
-        </div>
-        <br>
-        <h2 style="text-align: left;">Je m'appelle Noan BURELIER</h2>
-        <button>voir mon CV</button>
+{% if query %}
+    <p>Vous avez recherché : <strong>{{ query }}</strong></p>
+{% endif %}
 
+{% if results is empty %}
+    <p>Aucun résultat trouvé.</p>
+{% else %}
+
+    <div class="search-section">
+        <h2>Compétences</h2>
+        {% if results.competences is empty %}
+            <p>Aucun résultat.</p>
+        {% else %}
+            <ul>
+            {% for c in results.competences %}
+                <li>{{ c.name }} - {{ c.description }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
     </div>
 
-</body>
+    <div class="search-section">
+        <h2>Projets</h2>
+        {% if results.projects is empty %}
+            <p>Aucun résultat.</p>
+        {% else %}
+            <ul>
+            {% for p in results.projects %}
+                <li>{{ p.title }} - {{ p.description }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
+    <div class="search-section">
+        <h2>CV</h2>
+        {% if results.cvs is empty %}
+            <p>Aucun résultat.</p>
+        {% else %}
+            <ul>
+            {% for cv in results.cvs %}
+                <li>{{ cv.title }} - {{ cv.content|raw }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
+{% endif %}
 {% endblock %}
+
+
+
+

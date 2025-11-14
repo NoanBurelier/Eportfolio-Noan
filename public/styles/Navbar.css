@@ -1,0 +1,52 @@
+/* --- Style du menu déroulant --- */
+.dropdown-custom {
+    position: relative;
+}
+
+.dropdown-custom .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    padding: 10px 0;
+    list-style: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 160px;
+
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.25s ease;
+}
+
+.dropdown-custom .submenu li a {
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-custom .submenu li a:hover {
+    background: #f0f0f0;
+}
+
+/* --- Animation de la flèche --- */
+.dropdown-toggle-custom .arrow {
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform 0.25s ease;
+}
+
+/* --- Hover : afficher le menu --- */
+.dropdown-custom:hover .submenu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Hover : tourner la flèche --- */
+.dropdown-custom:hover .arrow {
+    transform: rotate(180deg);
+}
+
