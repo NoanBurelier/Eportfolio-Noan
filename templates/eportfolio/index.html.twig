@@ -1,59 +1,29 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Acceuil{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/Accueil/Accueil.css') }}">
+{% endblock %}
 
 {% block body %}
-<h1>Résultats de recherche</h1>
-
-{% if query %}
-    <p>Vous avez recherché : <strong>{{ query }}</strong></p>
-{% endif %}
-
-{% if results is empty %}
-    <p>Aucun résultat trouvé.</p>
-{% else %}
-
-    <div class="search-section">
-        <h2>Compétences</h2>
-        {% if results.competences is empty %}
-            <p>Aucun résultat.</p>
-        {% else %}
-            <ul>
-            {% for c in results.competences %}
-                <li>{{ c.name }} - {{ c.description }}</li>
-            {% endfor %}
-            </ul>
-        {% endif %}
+    <div class="content-center">
+        <button class="btn">Ici vous pouvez consulter mon CV</button>
     </div>
 
-    <div class="search-section">
-        <h2>Projets</h2>
-        {% if results.projects is empty %}
-            <p>Aucun résultat.</p>
-        {% else %}
-            <ul>
-            {% for p in results.projects %}
-                <li>{{ p.title }} - {{ p.description }}</li>
-            {% endfor %}
-            </ul>
-        {% endif %}
+    <div class="content-center-Comp">
+        <button class="btn">Ici vous trouverez mes différentes <br> Compétences</button>
     </div>
 
-    <div class="search-section">
-        <h2>CV</h2>
-        {% if results.cvs is empty %}
-            <p>Aucun résultat.</p>
-        {% else %}
-            <ul>
-            {% for cv in results.cvs %}
-                <li>{{ cv.title }} - {{ cv.content|raw }}</li>
-            {% endfor %}
-            </ul>
-        {% endif %}
+    <div class="content-center-Hobb">
+        <button class="btn">Ici vous pourrez me contacter et m'<br>envoyer un mail</button>
     </div>
 
-{% endif %}
+    <div class="content-center-con">
+        <button class="btn">Ici vous pourrez découvrir mes hobbies</button>
+    </div>
 {% endblock %}
+
+
 
 
 
