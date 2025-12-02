@@ -8,10 +8,10 @@
 {% block body %}
     <div class="page-center">
         <div class = "grid-buttons">
-            <button class="btn btn-cv">Ici vous pouvez consulter mon CV</button>
-            <button class="btn">Ici vous trouverez mes différentes <br> Compétences</button>
-            <button class="btn">Ici vous pourrez me contacter et <br> m'envoyer un mail</button>
-            <button class="btn">Ici vous pourrez découvrir mes hobbies</button>
+            <a class="btn btn-cv" href={{ path ('CV') }} ><strong>Cliquer ici pour voir mon CV</strong></a>
+            <a class="btn btn-comp" href={{ path ('compétences') }}>Ici vous trouverez mes différentes <br> Compétences</a>
+            <a class="btn" href={{ path ('Contact') }}>Ici vous pourrez me contacter et <br> m'envoyer un mail</a>
+            <a class="btn" href={{ path ('hobbies') }}>Ici vous pourrez découvrir mes hobbies</a>
         </div>
     </div>
 {% endblock %}

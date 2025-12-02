@@ -2,18 +2,28 @@
 
 /* button */
 .btn {
+  display: inline-block;   /* ou block si tu veux qu’ils prennent toute la largeur */
+  text-align: center;      /* centre le texte */
   margin: 10px;
-  padding: 55px 100px;
+  padding: 55px 110px;
   font-size: 20px;
-  min-height: 300px;
+  min-height: 520px;
   border: none;
   outline: none;
-  color: #f5f5f5;
+  color: #0f0f0f;
   cursor: pointer;
   position: relative;
   z-index: 0;
   border-radius: 12px;
+  text-decoration: none;
+
+  display: flex;
+  justify-content: flex-start;     /* centre horizontalement */
+  align-items: center;         /* centre verticalement */
+  text-align: center;          /* centre le texte sur plusieurs lignes */
+  flex-direction: column;   /* enlève le soulignement des liens */
 }
+
 .btn::after {
   content: "";
   z-index: -1;
@@ -24,11 +34,6 @@
   left: 0;
   top: 0;
   border-radius: 10px;
-
-  background-image: url('public/styles/Accueil/Image/image-button.webp'); /* chemin vers ton image */
-  background-size: cover;       /* pour que l’image remplisse le bouton */
-  background-position: center;  /* centrer l’image */
-  background-repeat: no-repeat;
 }
 /* glow */
 .btn::before {
@@ -48,7 +53,7 @@
   filter: blur(8px);
   animation: glowing 20s linear infinite;
   transition: opacity .3s ease-in-out;
-  border-radius: 10px;
+  border-radius: 20px;
   opacity: 0;
 }
 
@@ -77,17 +82,28 @@
   display: flex;
   justify-content: center;   
   align-items: center;       
-  height: 300vh;             
+  height: 150vh;             
 }
 
 .grid-buttons {
   display: grid;
-  grid-template-columns: repeat(2, auto); 
-  gap: 0px; 
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px; 
 }
 
+
 .btn-cv::after {
-  background-image: url('public/styles/Accueil/Image/image-button.webp');
+  background-image: url('/styles/Accueil/Image/CV_image.jpg'); /* chemin relatif à public/ */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.btn-comp::after {
+  background-image: url('/styles/Accueil/Image/photo-compétences.jpg'); /* chemin relatif à public/ */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 
