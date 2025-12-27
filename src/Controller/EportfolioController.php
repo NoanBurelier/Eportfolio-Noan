@@ -80,6 +80,14 @@ final class EportfolioController extends AbstractController
         ]);
     }
 
+    #[Route('/eportfolioNoan/CV/Formation', name: 'Form')]
+    public function form(): Response
+    {
+        return $this->render('eportfolio/CV/Formation.html.twig', [
+            'controller_name' => 'EportfolioController',
+        ]);
+    }
+
     #[Route('/eportfolioNoan/compétences/Administrer', name: 'Administrer')]
     public function Administrer(): Response
     {
@@ -120,5 +128,36 @@ final class EportfolioController extends AbstractController
         ]);
     }
 
+    #[Route('/eportfolioNoan/MentionLegal', name: 'MentionLegal')]
+    public function MentionLegal(): Response
+    {
+        return $this->render('eportfolio/PiedPage/Mentions legal/MentionsLegal.html.twig', [
+            'controller_name' => 'EportfolioController',
+        ]);
+    }
+
+        #[Route('/eportfolioNoan/PolitiqueDeConfigentialité', name: 'PolitiqueDeConfigentialité')]
+    public function PolitiqueDeConfigentialité(): Response
+    {
+        return $this->render('eportfolio/PiedPage/Confidentialités/Confidentialite.html.twig', [
+            'controller_name' => 'EportfolioController',
+        ]);
+    }
+
+    #[Route('/eportfolioNoan/Cookies', name: 'Cookies')]
+    public function Cookies(): Response
+    {
+        return $this->render('eportfolio/PiedPage/Cookies/Cookies.html.twig', [
+            'controller_name' => 'EportfolioController',
+        ]);
+    }
+
+    #[Route('/eportfolioNoan/CGU', name: 'CGU')]
+    public function CGU(): Response
+    {
+        return $this->render('eportfolio/PiedPage/CGU/CGU.html.twig', [
+            'controller_name' => 'EportfolioController',
+        ]);
+    }
 
 }

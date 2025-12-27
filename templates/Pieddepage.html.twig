@@ -1,76 +1,12 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Eportfolio Noan{% endblock %}</title>
-        <link rel="stylesheet" href="https://bootswatch.com/5/superhero/bootstrap.min.css">
+    <head>    
         {% block stylesheets %}
-          <link rel="stylesheet" href="{{ asset('styles/Navbar.css') }}">
           <link rel="stylesheet" href="{{ asset('styles/Accueil/PiedDePage.css') }}">
         {% endblock %}
-        
-          
 
-    </head>
-    <body>
-          <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="{{ path ('app_eportfolio') }}">EPORTFOLIO</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarColor03">
-              <ul class="navbar-nav me-auto">
-                <li class="nav-item dropdown-custom">
-                  <a class="nav-link dropdown-toggle-custom" href="{{ path ('CV') }}">
-                    CV <span class="arrow">▼</span>
-                  </a>
 
-                  <ul class="submenu">
-                    <li><a href="{{ path ('atouts') }}">Mes atouts</a></li>
-                    <li><a href="{{ path ('ExpPro') }}">Expériences professionnelles</a></li>
-                    <li><a href="{{ path ('vie') }}">Vie associative</a></li>
-                    <li><a href="{{ path ('LM') }}">Ma lettre de motivation</a></li>
-                    <li><a href="{{ path ('Form') }}">Mes Formations</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown-custom">
-                  <a class="nav-link dropdown-toggle-custom" href="{{ path ('compétences') }}">
-                    Mes compétences <span class="arrow">▼</span>
-                  </a>
-
-                  <ul class="submenu">
-                    <li><a href="{{ path ('Administrer') }}">Administrer</a></li>
-                    <li><a href="{{ path ('Connecter') }}">Connecter</a></li>
-                    <li><a href="{{ path ('Programmer') }}">Programmmer</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown-custom">
-                  <a class="nav-link dropdown-toggle-custom" href="{{ path ('hobbies') }}">
-                    Hobbies <span class="arrow">▼</span>
-                  </a>
-
-                  <ul class="submenu">
-                    <li><a href="{{ path ('loisirs') }}">Loisir</a></li>
-                    <li><a href="{{ path ('ProjetPerso') }}">Mes projets perso en informatique</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{{ path ('Contact') }}">Me Contacter</a>
-                </li>
-              </ul>
-              <form class="d-flex">
-                <input class="form-control me-sm-2" type="search" placeholder="Search">
-                <button type="submit">Search</button>
-              </form>
-            </div>
-          </div>
-        </nav>
-        <main class="content mt-5 pt-4">
-          {% block body %}{% endblock %}
-        </main>
-        
-        <footer>
+<footer>
         <div class="footer-content">
             <div class="footer-main">
                 <div class="footer-section">
@@ -130,9 +66,7 @@
                 <p>&copy; 2024 IUT Roanne - BUT Réseaux & Télécommunications. Tous droits réservés.</p>
                 <p style="margin-top: 10px;">Conformité RGPD | Accessibilité: Partiellement conforme</p>
             </div>
-            </footer>
         </div>
+    </footer>
     </body>
-        
-    
-</html>    
+</html>

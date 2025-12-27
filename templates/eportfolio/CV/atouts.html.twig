@@ -1,3 +1,42 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Acceuil{% endblock %}
+{% block title %}Mes atouts{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/CV/Atouts.css') }}">
+    
+{% endblock %}
+
+{% block body %}
+    <h1 class = "stylesTexte"><strong>Mes atouts</strong></h1>
+    <ul>
+        <li class = "p1">Sérieux</li>
+        <p class = "p">J'ai toujours été sérieux, j'ai notamment appris cette qualité grâce à 
+            mes différentes expériences (Vous pouvez les voir dans la section "Mes Expériences Professionelles") 
+            qui m'ont rendu de plus en plus sérieux.</p>
+        <li class = "p1">Discipliné</li>
+        <p class = "p">Je suis discipliné, j'ai appris cela à la salle de sport en faisant les efforts 
+            tous les jours pour pouvoir être la meilleure version de soi même.</p>
+        <li class = "p1">Esprit Collectif</li>
+        <p class = "p">L'esprit Collectif je l'ai appris quand j'ai joué au basket en club. Avoir l'esprit collectif 
+            est une qualité essentielle quand on joue à un sport collectif.</p>
+        <li class = "p1">Curieux</li>
+        <p class = "p">J'ai toujours été curieux, j'aime savoir comment chaque chose marche et pourquoi.</p>
+        <li class = "p1">Ponctuel</li>
+        <p class = "p">Je ne suis jamais en retard, sauf si j'ai un problème personnel évidemment.</p> 
+        <li class = "p1">Travailleur</li>
+        <p class = "p">Je serai capable de donner le meilleur de moi-même pour contribuer à l'activité de l'entreprise.</p> 
+    </ul>
+
+    <div class="page-center">
+        <div class = "grid-buttons">
+            <a class="btn" href={{ path ('ExpPro') }}>Expériences Professionelles</a>
+            <a class="btn" href={{ path ('Form') }}>Mes Formations</a>
+            <a class="btn" href={{ path ('vie') }}>Vie Assiociative</a>
+            <a class="btn" href={{ path ('LM') }}>Lettre de Motivation</a>
+        </div>
+    </div>
+
+
+{% endblock %}

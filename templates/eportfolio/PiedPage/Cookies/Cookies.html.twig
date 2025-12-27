@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/Accueil/PiedDePage.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div id="cookies" >
+            <h2>Politique de Cookies</h2>
+            
+            <h3>Qu'est-ce qu'un cookie ?</h3>
+            <p>Un cookie est un petit fichier texte stocké sur votre ordinateur ou appareil mobile lors de votre visite sur un site web.</p>
+
+            <h3>Cookies utilisés sur ce site</h3>
+            
+            <h4>Cookies strictement nécessaires</h4>
+            <p>Ces cookies sont indispensables au fonctionnement du site :</p>
+            <ul>
+                <li>Cookie de session (durée: session)</li>
+                <li>Cookie de préférences linguistiques (durée: 12 mois)</li>
+            </ul>
+
+            <h4>Cookies analytiques</h4>
+            <p>Ces cookies nous permettent d'améliorer le site en analysant son utilisation :</p>
+            <ul>
+                <li>Google Analytics (anonymisé) - durée: 13 mois</li>
+            </ul>
+
+            <h3>Gestion des cookies</h3>
+            <p>Vous pouvez à tout moment désactiver les cookies via les paramètres de votre navigateur. Attention, cela peut affecter votre expérience de navigation.</p>
+
+            <h4>Instructions par navigateur :</h4>
+            <ul>
+                <li><strong>Chrome :</strong> Paramètres > Confidentialité et sécurité > Cookies</li>
+                <li><strong>Firefox :</strong> Options > Vie privée et sécurité</li>
+                <li><strong>Safari :</strong> Préférences > Confidentialité</li>
+                <li><strong>Edge :</strong> Paramètres > Cookies et autorisations</li>
+            </ul>
+
+            <h3>Consentement</h3>
+            <p>En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies conformément à cette politique.</p>
+        </div>
+    </div>
+{% endblock %}
+    

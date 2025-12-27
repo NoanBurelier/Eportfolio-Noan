@@ -1,3 +1,28 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Acceuil{% endblock %}
+{% block title %}Présentation CV{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/CV/PCV.css') }}">
+    
+{% endblock %}
+
+{% block body %}
+    <h1 class = "stylesTexte">Ici vous trouverez mon CV en plusieurs sections.</h1>
+    <p class = "p">Mes ambitions après avoir obtenu ce BUT <strong class="texte-gras">R</strong>éseaux <strong class="texte-gras">
+        T</strong>élécommunication 
+        sont ensuite de réaliser un master en informatique, puis d'être engagé dans une entreprise, et 
+        dans le meilleur des cas avec un poste en cybersécurité ou un poste d'administrateur réseaux.</p>
+    <h2 class = "stylesTexte2">CLIQUEZ SUR LA SECTION QUI VOUS INTÉRESSE :</h2>
+
+    <div class="page-center">
+        <div class = "grid-buttons">
+            <a class="btn" href={{ path ('atouts') }} > Mes Atouts</a>
+            <a class="btn" href={{ path ('ExpPro') }}>Expériences Professionelles</a>
+            <a class="btn" href={{ path ('Form') }}>Mes Formations</a>
+            <a class="btn" href={{ path ('vie') }}>Vie Assiociative</a>
+            <a class="btn" href={{ path ('LM') }}>Lettre de Motivation</a>
+        </div>
+    </div>
+{% endblock %}

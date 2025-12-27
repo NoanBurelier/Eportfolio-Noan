@@ -50,3 +50,32 @@
     transform: rotate(180deg);
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* navbar fixée en haut */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    margin-top: 0 !important;
+}
+
+/* espace pour ne pas que le contenu passe dessous */
+body {
+    padding-top: 80px; /* on ajuste après */
+}
+
+/* Mobile / tablette : navbar plus haute */
+@media (max-width: 992px) {
+    body {
+        padding-top: 110px; /* augmente pour éviter que le texte passe dessous */
+    }
+}
+
+
+

@@ -1,110 +1,306 @@
 
 
-/* button */
+/* ===== VARIABLES CSS ===== */
+:root {
+  --primary-color: #048B9A;
+  --secondary-color: #645e5e;
+  --text-color: #0f0f0f;
+  --hover-glow: rgba(4, 139, 154, 0.6);
+  --border-radius: 12px;
+  --transition-speed: 0.3s;
+  --button-width: 500px;
+  --button-height: 520px;
+}
+
+/* ===== CONTENEUR PRINCIPAL ===== */
+.page-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+  padding-top: 120px;
+  margin-bottom: 40px;
+}
+
+/* ===== GRILLE DE BOUTONS ===== */
+.grid-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+/* ===== BOUTON DE BASE ===== */
 .btn {
-  display: inline-block;   /* ou block si tu veux qu’ils prennent toute la largeur */
-  text-align: center;      /* centre le texte */
-  margin: 10px;
-  padding: 55px 110px;
-  font-size: 20px;
-  min-height: 520px;
+  /* Dimensions et positionnement */
+  width: var(--button-width);
+  height: var(--button-height);
+  position: relative;
+  
+  /* Flexbox pour le contenu */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  /* Apparence */
   border: none;
   outline: none;
-  color: #0f0f0f;
-  cursor: pointer;
-  position: relative;
-  z-index: 0;
-  border-radius: 12px;
+  border-radius: var(--border-radius);
   text-decoration: none;
-
-  display: flex;
-  justify-content: flex-start;     /* centre horizontalement */
-  align-items: center;         /* centre verticalement */
-  text-align: center;          /* centre le texte sur plusieurs lignes */
-  flex-direction: column;   /* enlève le soulignement des liens */
+  cursor: pointer;
+  
+  /* Typographie */
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 500;
+  
+  /* Espacement */
+  margin: 10px;
+  padding: 40px;
+  
+  /* Effets visuels */
+  transition: all var(--transition-speed) ease-in-out;
+  overflow: hidden;
+  
+  /* Z-index pour la gestion des calques */
+  z-index: 1;
 }
 
+/* ===== ARRIÈRE-PLAN DU BOUTON ===== */
 .btn::after {
   content: "";
-  z-index: -1;
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: #645e5e;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  z-index: -1;
+  transition: background-color var(--transition-speed) ease;
 }
-/* glow */
+
+/* ===== EFFET DE GLOW AU SURVOL ===== */
 .btn::before {
   content: "";
-  background: linear-gradient(
-    45deg,
-    #FF0000, #FF7300, #FFFB00, #48FF00,
-    #00FFD5, #002BFF, #FF00C8, #FF0000
-  );
   position: absolute;
   top: -2px;
   left: -2px;
-  background-size: 600%;
-  z-index: -1;
   width: calc(100% + 4px);
-  height:  calc(100% + 4px);
+  height: calc(100% + 4px);
+  
+  /* Dégradé animé */
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    #f7f5f3,
+    var(--primary-color),
+    #fbfcfa,
+    #f9f9f9,
+    var(--primary-color),
+    #fcfbfc,
+    var(--primary-color)
+  );
+  
+  background-size: 600%;
   filter: blur(8px);
+  border-radius: calc(var(--border-radius) + 8px);
+  z-index: -2;
+  
+  /* Animation du glow */
   animation: glowing 20s linear infinite;
-  transition: opacity .3s ease-in-out;
-  border-radius: 20px;
   opacity: 0;
+  transition: opacity var(--transition-speed) ease-in-out;
 }
 
+/* ===== ANIMATION DU GLOW ===== */
 @keyframes glowing {
-  0% {background-position: 0 0;}
-  50% {background-position: 400% 0;}
-  100% {background-position: 0 0;}
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
 }
 
-/* hover */
+/* ===== ÉTATS DU BOUTON ===== */
+
+/* Survol */
 .btn:hover::before {
   opacity: 1;
 }
 
-.btn:active:after {
-  background: transparent;
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--hover-glow);
 }
 
+/* Clic actif */
 .btn:active {
+  transform: translateY(0);
   color: #000;
   font-weight: bold;
 }
 
-
-.page-center {
-  display: flex;
-  justify-content: center;   
-  align-items: center;       
-  height: 150vh;             
+.btn:active::after {
+  background: transparent;
 }
 
-.grid-buttons {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 20px; 
+/* Focus pour l'accessibilité */
+.btn:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 4px;
 }
 
+/* ===== VARIANTES DE BOUTONS AVEC IMAGES ===== */
 
+/* Bouton CV */
 .btn-cv::after {
-  background-image: url('/styles/Accueil/Image/CV_image.jpg'); /* chemin relatif à public/ */
+  background-image: url('/styles/Accueil/Image/image cv2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.btn-comp::after {
-  background-image: url('/styles/Accueil/Image/photo-compétences.jpg'); /* chemin relatif à public/ */
+/* Bouton Compétences */
+.btn-competences::after {
+  background-image: url('/styles/Accueil/Image/generated-image.png');
+  background-size: 105%;
+  background-position: center 70%;
+  background-repeat: no-repeat;
+}
+
+/* Bouton Hobbies */
+.btn-hobbie::after {
+  background-image: url('/styles/Accueil/Image/images hobbie 2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* Bouton Contact */
+.btn-contact::after {
+  background-image: url('/styles/Accueil/Image/image contact.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ===== EFFET DE SUPERPOSITION SUR LES IMAGES ===== */
+.btn-cv::after,
+.btn-competences::after,
+.btn-hobbie::after,
+.btn-contact::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: transform var(--transition-speed) ease;
+}
+
+/* Effet de zoom subtil au survol */
+.btn:hover::after {
+  transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1200px) {
+  :root {
+    --button-width: 400px;
+    --button-height: 420px;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-buttons {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  :root {
+    --button-width: 350px;
+    --button-height: 370px;
+  }
+  
+  .btn {
+    font-size: 18px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --button-width: 300px;
+    --button-height: 320px;
+  }
+  
+  .btn {
+    font-size: 16px;
+    padding: 20px;
+  }
+  
+  .page-center {
+    padding-top: 80px;
+  }
+}
+
+
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ripple::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-ripple:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+.stylesTexte {
+  text-align: center; /*centre le texte horizontalement*/
+  font-family: Georgia, serif;
+  text-shadow: 0 12px 14px rgba(41, 203, 221, 0.3);
+  font-size: 70px;
+  color: #ffffff;
+  padding: 40px;
+}
+
+.p {
+  text-align: justify; /*centre le texte horizontalement*/
+  font-family: Georgia, serif;
+  font-size: 20px;
+  color: #aeb7c4;
+  padding: 40px;
+}
+
+.texte-gras {
+  font-weight: 900; /* gras */
+  color:#ffffff;
+}
+
+/* Effet de survol pour les titres  */
+.stylesTexte:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+
+
+
 
 
 

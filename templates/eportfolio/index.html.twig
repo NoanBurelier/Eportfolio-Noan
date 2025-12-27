@@ -1,20 +1,32 @@
 {% extends 'base.html.twig' %}
 
+
 {% block stylesheets %}
     {{ parent() }}
     <link rel="stylesheet" href="{{ asset('styles/Accueil/Accueil.css') }}">
+    
 {% endblock %}
 
 {% block body %}
+    <h1 class = "stylesTexte"><strong>Bienvenue sur le Eportfolio de Noan BURELIER.</strong></h1>
+    <br>
+    <p class = "p">Je m'appelle Noan Burelier et je suis actuellement un étudiant en 
+        <strong class="texte-gras">R</strong>éseau et <strong class="texte-gras">T</strong>élécommunication à l'IUT de Roanne dans le groupe A1.
+         Je suis actuellement à la recherche d'un travail en alternance au sein d'une entreprise pour ma seconde année 
+         en <strong class="texte-gras">R</strong>éseau et <strong class="texte-gras">T</strong>élécommunication. 
+         Ainsi, je pourrai mettre concrètement en oeuvre ce que j'apprends en cours. </p> 
     <div class="page-center">
         <div class = "grid-buttons">
-            <a class="btn btn-cv" href={{ path ('CV') }} ><strong>Cliquer ici pour voir mon CV</strong></a>
-            <a class="btn btn-comp" href={{ path ('compétences') }}>Ici vous trouverez mes différentes <br> Compétences</a>
-            <a class="btn" href={{ path ('Contact') }}>Ici vous pourrez me contacter et <br> m'envoyer un mail</a>
-            <a class="btn" href={{ path ('hobbies') }}>Ici vous pourrez découvrir mes hobbies</a>
+            <a class="btn btn-cv" href={{ path ('CV') }} ></a>
+            <a class="btn btn-competences" href={{ path ('compétences') }}></a>
+            <a class="btn btn-hobbie" href={{ path ('hobbies') }}></a>
+            <a class="btn btn-contact" href={{ path ('Contact') }}></a>
         </div>
     </div>
+
+
 {% endblock %}
+
 
 
 

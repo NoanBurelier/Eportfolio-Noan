@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/Accueil/PiedDePage.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div id="mentions">
+        <h2>Mentions Légales</h2>
+    
+        <h3>Éditeur du site</h3>
+        <p><strong>IUT de Roanne - Université Jean Monnet</strong><br>
+        BUT Réseaux &amp; Télécommunications<br>
+        20 Avenue de Paris, 42300 Roanne<br>
+        Tél : 04 77 44 88 00<br>
+        Email : contact@iut-roanne.fr</p>
+
+        <h3>Directeur de la publication</h3>
+        <p>Le directeur de l'IUT de Roanne</p>
+
+        <h3>Hébergement</h3>
+        <p><strong>OVH</strong><br>
+        SAS au capital de 10 174 560 €<br>
+        RCS Lille Métropole 424 761 419 00045<br>
+        Siège social : 2 rue Kellermann, 59100 Roubaix, France<br>
+        Tél : 1007</p>
+
+        <h3>Propriété intellectuelle</h3>
+        <p>L'ensemble du contenu de ce site (textes, images, vidéos, etc.) est protégé par le droit d'auteur. Toute reproduction, même partielle, est soumise à autorisation préalable.</p>
+
+        <h3>Crédits</h3>
+        <p>Site web réalisé par un étudiant du BUT Réseaux &amp; Télécommunications dans le cadre de sa formation.</p>
+    </div>
+{% endblock %}
