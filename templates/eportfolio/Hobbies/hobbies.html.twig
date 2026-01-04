@@ -2,10 +2,30 @@
 
 {% block title %}Acceuil{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/Hobbies/hobCSS.css') }}">
+    
+{% endblock %}
+
 {% block body %}
 
-    {% block footer %}
-        {% include 'Pieddepage.html.twig' %}
-    {% endblock %}
+    <h1 class= 'stylesTexte'>Mes Hobbies </h1>
+
+    <ul>
+        <li class = 'p1'>Les Jeux vidéo</li>
+        <p class = 'p'>Je joue souvent aux jeux vidéo durant mon temps libre, surtout à des jeux solo comme par exemple 
+            Clair Obscur: expédition 33. J'aime bien cela car ça me permet de me détendre et de penser à autre chose.</p>
+        <img src='/styles/Accueil/Hobbies/image jeux vidéo.jpg' alt = 'image de jeux vidéo' class = "petite-image">
+        <li class = 'p1'>Le basket</li>
+        <p class = 'p'>Depuis tout petit je joue au basket, j'en ai fait en club (au CTC Feurs Rozier). 
+            J'ai arrêté cette année mais je continue toujours à arbitrer en tant qu'arbitre officiel.</p>
+        <img src='/styles/Accueil/Hobbies/image basket.jpg' alt = 'image de jeux vidéo' class = "petite-image">
+        <li class = 'p1'>La musculation</li>
+        <p class = 'p'>J'essaie d'aller à la salle de sport 3 fois par semaine pour pouvoir me dépenser.</p>
+        <img src='/styles/Accueil/Hobbies/image musculation.jpg' alt = 'image de jeux vidéo' class = "petite-image">
+        <li class = 'p1'>Regarder des films, des séries et des animés</li>
+        <p class = 'p'>Je regarde souvent des séries ou des animés le soir. Ma série préférée est Game of Thrones et mon animé préféré est l'Attack des Titans.</p>
+        <img src='/styles/Accueil/Hobbies/image film.jpg' alt = 'image de jeux vidéo' class = "petite-image">
 
 {% endblock %}

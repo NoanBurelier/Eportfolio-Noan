@@ -1,0 +1,176 @@
+/* ===== IMPORT POLICE MANUSCRITE ===== */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Patrick+Hand&family=Shadows+Into+Light&display=swap');
+
+/* ===== CONTENEUR DE LA LETTRE ===== */
+.lettre-container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 60px 80px;
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f8f8 100%);
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  position: relative;
+  font-family: 'Caveat', cursive;
+  line-height: 2;
+  color: #1a1a1a;
+  animation: fadeInLetter 1s ease-out;
+}
+
+/* ===== EFFET PAPIER ===== */
+.lettre-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      transparent,
+      transparent 31px,
+      rgba(0, 0, 0, 0.02) 31px,
+      rgba(0, 0, 0, 0.02) 32px
+    );
+  pointer-events: none;
+  border-radius: 4px;
+}
+
+/* ===== EFFET OMBRE RÉALISTE ===== */
+.lettre-container::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  right: 20px;
+  height: 20px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15) 0%, transparent 70%);
+  z-index: -1;
+  filter: blur(10px);
+}
+
+/* ===== STYLE DU PARAGRAPHE ===== */
+.lettre-container p {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  text-align: justify;
+  text-indent: 40px;
+  letter-spacing: 0.5px;
+  white-space: pre-line;
+  font-weight: 600;
+}
+
+/* ===== EN-TÊTE (Madame, Monsieur) ===== */
+.lettre-container p::first-line {
+  text-indent: 0;
+  font-weight: 600;
+}
+
+/* ===== SIGNATURE ===== */
+.lettre-signature {
+  display: block;
+  margin-top: 40px;
+  text-align: right;
+  font-weight: 700;
+  font-size: 24px;
+  text-indent: 0 !important;
+  color: #000000;
+  transform: rotate(-2deg);
+}
+
+/* ===== ANIMATION D'APPARITION ===== */
+@keyframes fadeInLetter {
+  from {
+    opacity: 0;
+    transform: translateY(30px) rotateX(10deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+/* ===== EFFET PLIÉ (OPTIONNEL) ===== */
+.lettre-pli {
+  position: relative;
+  overflow: hidden;
+}
+
+.lettre-pli::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.03) 50%,
+    transparent 100%
+  );
+  transform: translateX(-50%);
+}
+
+/* ===== RESPONSIVE - TABLETTE ===== */
+@media (max-width: 900px) {
+  .lettre-container {
+    max-width: 90%;
+    padding: 50px 60px;
+    margin: 40px auto;
+  }
+  
+  .lettre-container p {
+    font-size: 21px;
+  }
+}
+
+/* ===== RESPONSIVE - MOBILE ===== */
+@media (max-width: 600px) {
+  .lettre-container {
+    padding: 40px 30px;
+    margin: 30px 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+  }
+  
+  .lettre-container p {
+    font-size: 20px;
+    line-height: 1.8;
+    text-indent: 30px;
+  }
+  
+  .lettre-signature {
+    font-size: 22px;
+    margin-top: 30px;
+  }
+}
+
+/* ===== VERSION AVEC TIMBRE (OPTIONNEL) ===== */
+.lettre-timbre {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 60px;
+  border: 2px solid #048B9A;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #048B9A;
+  font-weight: bold;
+  background: rgba(4, 139, 154, 0.05);
+  transform: rotate(5deg);
+}
+
+/* ===== EFFET HOVER SUR LA LETTRE ===== */
+.lettre-container:hover {
+  box-shadow: 
+    0 15px 50px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+  transform: translateY(-5px);
+  transition: all 0.4s ease;
+}

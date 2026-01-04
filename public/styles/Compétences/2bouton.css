@@ -16,86 +16,10 @@
   padding: 20px;
 }
 
-.p2 {
-  list-style-position: inside;
-  text-align: center; /*centre le texte horizontalement*/
-  font-style: italic;
-  font-family: Georgia, serif;
-  font-size: 23px;
-  color: #1661a7;
-  padding: 15px;
-}
-
-.p {
-  list-style-position: inside;
-  text-align: center; /*centre le texte horizontalement*/
-  font-family: Georgia, serif;
-  font-size: 20px;
-  color: #aeb7c4;
-  padding: 10px;
-}
-
-.p3 {
-  list-style-position: inside;
-  text-align: center; /*centre le texte horizontalement*/
-  font-family: Georgia, serif;
-  font-size: 18px;
-  color: #aeb7c4;
-  padding: 10px;
-}
-
-/* Effet de survol pour les titres  */
 .stylesTexte:hover {
   transform: scale(1.02);
   transition: transform 0.3s ease;
 }
-
-.p1:hover {
-  transform: scale(1.02);
-  transition: transform 0.3s ease;
-}
-
-.p2:hover {
-  transform: scale(1.02);
-  transition: transform 0.3s ease;
-}
-
-/*Pour le bouton pdf*/
-
-.pdf-btn-container {
-  display: flex;
-  justify-content: center;   
-}
-
-.pdf-btn {
-    background: linear-gradient(45deg, #e74c3c, #c0392b);
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    box-shadow: 0 2px 8px rgba(231, 76, 60, 0.3);
-}
-
-.pdf-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
-}
-
-.pdf-btn:active {
-    transform: translateY(0);
-}
-
-.pdf-btn i {
-    font-size: 12px;
-}
-
 
 /* ===== VARIABLES CSS ===== */
 :root {
@@ -124,7 +48,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  max-width: 1040px;
+  max-width: 840px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -298,27 +222,39 @@
 
 .btn:nth-child(1) { animation-delay: 0.1s; }
 .btn:nth-child(2) { animation-delay: 0.2s; }
-.btn:nth-child(3) { animation-delay: 0.3s; }
-.btn:nth-child(4) { animation-delay: 0.4s; }
-
-/* ===== DERNIER BOUTON CENTRÉ ===== */
-/* Supprimé car nous avons maintenant 4 boutons en grille 2x2 */
 
 /* ===== RESPONSIVE - TABLETTE ===== */
 @media (max-width: 1100px) {
   :root {
-    --button-width: 450px;
-    --button-height: 470px;
+    --button-width: 360px;
+    --button-height: 400px;
   }
   
   .grid-buttons {
-    max-width: 940px;
+    max-width: 780px;
     gap: 15px;
   }
   
   .btn {
-    font-size: 18px;
-    padding: 35px;
+    font-size: 17px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --button-width: 320px;
+    --button-height: 380px;
+  }
+  
+  .grid-buttons {
+    max-width: 700px;
+    gap: 15px;
+  }
+  
+  .btn {
+    font-size: 16px;
+    padding: 25px;
   }
 }
 
@@ -346,10 +282,6 @@
     font-size: 18px;
     padding: 30px 20px;
     width: 100%;
-  }
-  
-  .btn:last-child {
-    grid-column: 1;
   }
 }
 

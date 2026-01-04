@@ -1,12 +1,201 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Acceuil{% endblock %}
+{% block title %}Connecter{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/Compétences/2bouton.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/Compétences/text box.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/Compétences/barreNotation.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/Compétences/bouton doc.css') }}">
+    
+{% endblock %}
 
 
 {% block body %}
 
-    {% block footer %}
-        {% include 'Pieddepage.html.twig' %}
-    {% endblock %}
+    <h1 class = "stylesTexte">Connecter les entreprises et les usagers</h1>
+    <div class = text-box>
+        <h1>AC12.01 Mesurer et analyser les signaux </h1>
+        <h2>Niveau d'acquisition :</h2>
+        <div class="badges-container">
+         <div class="difficulty-badge">
+             <div class="difficulty-circle">
+                 <span class="difficulty-number">4</span>
+                 <span class="difficulty-label">/4</span>
+             </div>
+             <div class="stars-container">
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+             </div>
+         </div>
+        </div>
+        <p>Document de preuve</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir le document de preuve
+            </button>
+        </div>
+        <p>Analyse Réflexives</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir l'Analyse Réflexives
+            </button>
+        </div>
+
+        </div>
+    </div>
+
+    <div class = text-box>
+        <h1>AC12.02 Caractériser des systèmes de transmissions élémentaires et découvrir la modélisation mathématique de leur fonctionnement </h1>
+        <h2>Niveau d'acquisition :</h2>
+        <div class="badges-container">
+         <div class="difficulty-badge">
+             <div class="difficulty-circle">
+                 <span class="difficulty-number">4</span>
+                 <span class="difficulty-label">/4</span>
+             </div>
+             <div class="stars-container">
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+             </div>
+         </div>
+        </div>
+        <p>Document de preuve</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir le document de preuve
+            </button>
+        </div>
+        <p>Analyse Réflexives</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir l'Analyse Réflexives
+            </button>
+        </div>
+
+        </div>
+    </div>
+    
+    <div class = text-box>
+        <h1>AC12.03 Déployer des supports de transmission </h1>
+        <h2>Niveau d'acquisition :</h2>
+        <div class="badges-container">
+         <div class="difficulty-badge">
+             <div class="difficulty-circle">
+                 <span class="difficulty-number">4</span>
+                 <span class="difficulty-label">/4</span>
+             </div>
+             <div class="stars-container">
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+             </div>
+         </div>
+        </div>
+        <p>Document de preuve</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir le document de preuve
+            </button>
+        </div>
+        <p>Analyse Réflexives</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir l'Analyse Réflexives
+            </button>
+        </div>
+
+        </div>
+    </div>
+
+    <div class = text-box>
+        <h1>AC12.04 Connecter les systèmes de ToIP </h1>
+        <h2>Niveau d'acquisition :</h2>
+        <div class="badges-container">
+         <div class="difficulty-badge">
+             <div class="difficulty-circle">
+                 <span class="difficulty-number">4</span>
+                 <span class="difficulty-label">/4</span>
+             </div>
+             <div class="stars-container">
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+             </div>
+         </div>
+        </div>
+        <p>Document de preuve</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir le document de preuve
+            </button>
+        </div>
+        <p>Analyse Réflexives</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir l'Analyse Réflexives
+            </button>
+        </div>
+
+        </div>
+    </div>
+
+    <div class = text-box>
+        <h1>AC12.05 Communiquer avec un tiers (client, collaborateur...) et adapter son discours et sa langue à son interlocuteur</h1>
+        <h2>Niveau d'acquisition :</h2>
+        <div class="badges-container">
+         <div class="difficulty-badge">
+             <div class="difficulty-circle">
+                 <span class="difficulty-number">4</span>
+                 <span class="difficulty-label">/4</span>
+             </div>
+             <div class="stars-container">
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+             </div>
+         </div>
+        </div>
+        <p>Document de preuve</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir le document de preuve
+            </button>
+        </div>
+        <p>Analyse Réflexives</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir l'Analyse Réflexives
+            </button>
+        </div>
+
+        </div>
+    </div>
+    </div>
+
+    <div class="page-center">
+        <div class = "grid-buttons">
+            <a class="btn" href={{ path ('Administrer') }}>Administrer</a>
+            <a class="btn" href={{ path ('Programmer') }}>Programmer</a>
+        </div>
+    </div>
 
 {% endblock %}

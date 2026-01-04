@@ -1,11 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Acceuil{% endblock %}
+{% block title %}Ma vie Associative{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/CV/Atouts.css') }}">
+    
+{% endblock %}
 
 {% block body %}
 
-    {% block footer %}
-        {% include 'Pieddepage.html.twig' %}
-    {% endblock %}
+    <h1 class = "stylesTexte">Ma vie Associative</h1>
+    <h2 class = "p1">Association sportive</h2>
+    <p class = "p">Je fais partie de l'association de basket CTC Feurs Rozier depuis 2018. J'ai commencé dans cette association par jouer au basket, puis pendant 
+        deux ans j'ai coaché bénévolement une équipe de basket de U9 (la première année) et U11 (la deuxième année) tout en continuant à jouer au basket. 
+        Ensuite, j'ai décidé de suivre une formation pour devenir abitre officiel du club, j'en ai suivi une pendant un an et je l'ai obtenue. Ainsi, de 2023 à 2025, 
+        j'ai joué pour le club et j'ai arbitré pour lui bénévolement lors d'événements sportifs
+        qu'ils organisaient par exemple (Tournois de pâques,..). Aujourd'hui, je continue à arbitrer mais j'ai arrêté de jouer au basket.</p>
+
+    <div class="page-center">
+        <div class = "grid-buttons">
+            <a class="btn" href={{ path ('atouts') }}>Mes atouts</a>
+            <a class="btn" href={{ path ('ExpPro') }}>Expériences Professionelles</a>
+            <a class="btn" href={{ path ('Form') }}>Mes Formations</a>
+            <a class="btn" href={{ path ('LM') }}>Lettre de Motivation</a>
+        </div>
+    </div>
 
 {% endblock %}

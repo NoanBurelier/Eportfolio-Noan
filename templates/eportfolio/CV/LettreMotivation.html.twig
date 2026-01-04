@@ -2,10 +2,35 @@
 
 {% block title %}Acceuil{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/CV/Atouts.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/CV/effet lettre.css') }}">
+    
+{% endblock %}
+
 {% block body %}
 
-    {% block footer %}
-        {% include 'Pieddepage.html.twig' %}
-    {% endblock %}
+    <h1 class = "stylesTexte">Ma lettre de motivation</h1>
+    <div class="lettre-container">
+        <p>Madame, Monsieur,
+  
+            Actuellement étudiant en BUT Réseaux Télécommunication, je souhaite intégrer une entreprise dans le domaine de l'informatique afin de développer mes compétences techniques et professionnelles. Sérieux, motivé et prêt à fournir les efforts nécessaires, je suis déterminé à m'investir pleinement dans les missions qui me seront confiées et à progresser rapidement au sein de votre équipe.
+  
+            Je reste à votre disposition pour tout entretien et vous remercie par avance de l'attention portée à ma candidature.
+  
+            Veuillez agréer, Madame, Monsieur, l'expression de mes salutations distinguées.
+  
+        <span class="lettre-signature">BURELIER Noan</span></p>
+    </div>
+
+    <div class="page-center">
+        <div class = "grid-buttons">
+            <a class="btn" href={{ path ('atouts') }}>Mes atouts</a>
+            <a class="btn" href={{ path ('ExpPro') }}>Expériences Professionelles</a>
+            <a class="btn" href={{ path ('Form') }}>Mes Formations</a>
+            <a class="btn" href={{ path ('vie') }}>Ma vie associative</a>
+        </div>
+    </div>
 
 {% endblock %}

@@ -1,11 +1,237 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Acceuil{% endblock %}
+{% block title %}Administrer{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/Compétences/2bouton.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/Compétences/text box.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/Compétences/barreNotation.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/Compétences/bouton doc.css') }}">
+    
+{% endblock %}
 
 {% block body %}
 
-    {% block footer %}
-        {% include 'Pieddepage.html.twig' %}
-    {% endblock %}
+    <h1 class = "stylesTexte">Administrer les réseaux et l’Internet</h1>
+    <div class = text-box>
+        <h1>AC11.01 Maîtriser les lois fondamentales de l’électricité afin d’intervenir sur des équipements de réseaux et télécommunications</h1>
+        <h2>Niveau d'acquisition :</h2>
+        <div class="badges-container">
+         <div class="difficulty-badge">
+             <div class="difficulty-circle">
+                 <span class="difficulty-number">4</span>
+                 <span class="difficulty-label">/4</span>
+             </div>
+             <div class="stars-container">
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+             </div>
+         </div>
+        </div>
+        <p>Document de preuve</p>
+        <div class="doc-btn-container">
+            <a class="doc-btn" href = "/styles/Accueil/Doc preuve/AC11.01 (1).docx">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir le document de preuve
+            </a>
+        </div>
+        <p>Analyse Réflexives</p>
+        <div class="doc-btn-container">
+            <a class="doc-btn"  href="/styles/Accueil/Analyses réflexives/Analyses Réflexives AC11.01 (1).docx">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir l'Analyse Réflexives
+            </a>
+        </div>
+
+        </div>
+    </div>
+
+    <div class = text-box>
+        <h1>AC11.02 Comprendre l’architecture et les fondements des systèmes numériques, 
+            les principes du codage de l’information, des communications et de l’Internet</h1>
+        <h2>Niveau d'acquisition :</h2>
+        <div class="badges-container">
+         <div class="difficulty-badge">
+             <div class="difficulty-circle">
+                 <span class="difficulty-number">3</span>
+                 <span class="difficulty-label">/4</span>
+             </div>
+             <div class="stars-container">
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-empty">★</span>
+             </div>
+         </div>
+        </div>
+        <p>Document de preuve</p>
+        <div class="doc-btn-container">
+            <a class="doc-btn" href="/styles/Accueil/Doc preuve/AC11.02.docx">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir le document de preuve
+            </a>
+        </div>
+        <p>Analyse Réflexives</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir l'Analyse Réflexives
+            </button>
+        </div>
+
+        </div>
+    </div>
+    
+    <div class = text-box>
+        <h1>AC11.03 Configurer les fonctions de base du réseau local </h1>
+        <h2>Niveau d'acquisition :</h2>
+        <div class="badges-container">
+         <div class="difficulty-badge">
+             <div class="difficulty-circle">
+                 <span class="difficulty-number">4</span>
+                 <span class="difficulty-label">/4</span>
+             </div>
+             <div class="stars-container">
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+             </div>
+         </div>
+        </div>
+        <p>Document de preuve</p>
+        <div class="doc-btn-container">
+            <a class="doc-btn" href="/styles/Accueil/Doc preuve/AC11.03.docx">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir le document de preuve
+            </a>
+        </div>
+        <p>Analyse Réflexives</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir l'Analyse Réflexives
+            </button>
+        </div>
+
+        </div>
+    </div>
+
+    <div class = text-box>
+        <h1>AC11.04 Maîtriser les rôles et les principes fondamentaux 
+            des systèmes d’exploitation afin d’interagir avec ceux-ci pour la configuration 
+            et l’administration des réseaux et services fournis</h1>
+        <h2>Niveau d'acquisition :</h2>
+        <div class="badges-container">
+         <div class="difficulty-badge">
+             <div class="difficulty-circle">
+                 <span class="difficulty-number">4</span>
+                 <span class="difficulty-label">/4</span>
+             </div>
+             <div class="stars-container">
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+             </div>
+         </div>
+        </div>
+        <p>Document de preuve</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir le document de preuve
+            </button>
+        </div>
+        <p>Analyse Réflexives</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir l'Analyse Réflexives
+            </button>
+        </div>
+
+        </div>
+    </div>
+
+    <div class = text-box>
+        <h1>AC11.05 Savoir identifier les dysfonctionnements du réseau local</h1>
+        <h2>Niveau d'acquisition :</h2>
+        <div class="badges-container">
+         <div class="difficulty-badge">
+             <div class="difficulty-circle">
+                 <span class="difficulty-number">4</span>
+                 <span class="difficulty-label">/4</span>
+             </div>
+             <div class="stars-container">
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+             </div>
+         </div>
+        </div>
+        <p>Document de preuve</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir le document de preuve
+            </button>
+        </div>
+        <p>Analyse Réflexives</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir l'Analyse Réflexives
+            </button>
+        </div>
+
+        </div>
+    </div>
+
+    <div class = text-box>
+        <h1>AC11.06 Installer un poste client, expliquer la procédure mise en place</h1>
+        <h2>Niveau d'acquisition :</h2>
+        <div class="badges-container">
+         <div class="difficulty-badge">
+             <div class="difficulty-circle">
+                 <span class="difficulty-number">4</span>
+                 <span class="difficulty-label">/4</span>
+             </div>
+             <div class="stars-container">
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+             </div>
+         </div>
+        </div>
+        <p>Document de preuve</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir le document de preuve
+            </button>
+        </div>
+        <p>Analyse Réflexives</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir l'Analyse Réflexives
+            </button>
+        </div>
+
+        </div>
+    </div>
+
+    <div class="page-center">
+        <div class = "grid-buttons">
+            <a class="btn" href={{ path ('Connecter') }}>Connecter</a>
+            <a class="btn" href={{ path ('Programmer') }}>Programmer</a>
+        </div>
+    </div>
 
 {% endblock %}

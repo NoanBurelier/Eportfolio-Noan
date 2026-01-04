@@ -1,11 +1,51 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Acceuil{% endblock %}
+{% block title %}Mes Expériences Professionelles{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/CV/Atouts.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    
+{% endblock %}
 
 {% block body %}
 
-    {% block footer %}
-        {% include 'Pieddepage.html.twig' %}
-    {% endblock %}
+    <h1 class = "stylesTexte">Mes Expériences Professionelles</h1>
+
+    <ul>
+        <li class = "p1">2023-2026</li>
+        <p class = "p2">Arbitre officiel de basket</p>
+        <p class = "p">Arbitre officiel de basket départementale et régionale</p>
+        <li class = "p1">Avril - 2024 </li>
+        <p class = "p2">Stage d’observation de 3 jours avec un informaticien à Technetics • 42 St Etienne</p>
+        <p class = "p">J'ai fait ce stage en Première pour savoir si les métiers dans l'informatique 
+            pouvaient m'intérésser, je vous mets ci-joint le pdf du compte rendu</p>
+        <div class="pdf-btn-container">
+            <a class="pdf-btn" href="/styles/Accueil/Pdf/Compte rendu stage.pdf" target="_blank">
+                <i class="fa-solid fa-file-pdf"></i>
+                PDF
+            </a>
+
+        </div>
+
+        <li class = "p1">Été - 2025 </li>
+        <p class = "p2">Agent communal dans la Commune de Marcilly-le-Châtel • Marcilly-le-Châtel</p>
+        <p class = "p">J'ai travaillé durant l'été pour pouvoir gagner un peu d'argent donc je me suis occupé de différentes choses :</p>
+        <li class = "p3">Entretien des espaces verts : tonte, débroussaillage...</li>
+        <li class = "p3">Entretien des massifs : désherber, arroser les plantes </li>
+
+        <div class="page-center">
+            <div class = "grid-buttons">
+                <a class="btn" href={{ path ('atouts') }}>Mes atouts</a>
+                <a class="btn" href={{ path ('Form') }}>Mes Formations</a>
+                <a class="btn" href={{ path ('vie') }}>Vie Assiociative</a>
+                <a class="btn" href={{ path ('LM') }}>Lettre de Motivation</a>
+            </div>
+        </div>
+
+
+
 
 {% endblock %}

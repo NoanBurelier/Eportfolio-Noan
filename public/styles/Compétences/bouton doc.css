@@ -1,0 +1,33 @@
+.doc-btn-container {
+  display: flex;
+  justify-content: center;   
+}
+
+.doc-btn {
+    background: linear-gradient(45deg, #2980b9, #1a5490);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 2px 8px rgba(41, 128, 185, 0.3);
+}
+
+.doc-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(41, 128, 185, 0.4);
+}
+
+.doc-btn:active {
+    transform: translateY(0);
+}
+
+.doc-btn i {
+    font-size: 12px;
+}

@@ -1,8 +1,22 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Acceuil{% endblock %}
+{% block title %}compétences{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/Compétences/compétences.css') }}">
+    
+{% endblock %}
 
 {% block body %}
+    <h1 class = "stylesTexte">Mes Compétences</h1>
+    <h2 class = "p1">Ici vous retrouverez les 3 compétences que j'ai aquis lors d'un BUT Réseaux et Télécommunication</h2>
 
-
+    <div class="page-center">
+        <div class = "grid-buttons">
+            <a class="btn" href={{ path ('Administrer') }}>Administrer</a>
+            <a class="btn" href={{ path ('Connecter') }}>Connecter</a>
+            <a class="btn" href={{ path ('Programmer') }}>Programmer</a>
+        </div>
+    </div>
 {% endblock %}

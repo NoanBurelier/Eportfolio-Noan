@@ -1,0 +1,39 @@
+.textMention h2{
+  text-align: center; /*centre le texte horizontalement*/
+  font-family: Georgia, serif;
+  font-size: 60px;
+  color: #ffffff;
+  padding: 40px;
+}
+
+.textMention h3{
+  text-align: center; /*centre le texte horizontalement*/
+  font-family: Georgia, serif;
+  font-size: 40px;
+  color: #ffffff;
+  padding: 30px;
+}
+
+.textMention h4{
+  text-align: center; /*centre le texte horizontalement*/
+  font-family: Georgia, serif;
+  font-size: 30px;
+  color: #ffffff;
+  padding: 30px;
+}
+
+.textMention p{
+  list-style-position: inside;
+  text-align: center; /*centre le texte horizontalement*/
+  font-family: Georgia, serif;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.textMention li{
+  list-style-position: inside;
+  text-align: center; /*centre le texte horizontalement*/
+  font-family: Georgia, serif;
+  font-size: 15px;
+  color: #ffffff;
+}

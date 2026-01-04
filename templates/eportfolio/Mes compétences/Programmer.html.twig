@@ -1,11 +1,234 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Acceuil{% endblock %}
+{% block title %}Programmer{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/Compétences/2bouton.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/Compétences/text box.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/Compétences/barreNotation.css') }}">
+    <link rel="stylesheet" href="{{ asset('styles/Compétences/bouton doc.css') }}">
+    
+{% endblock %}
 
 {% block body %}
 
-    {% block footer %}
-        {% include 'Pieddepage.html.twig' %}
-    {% endblock %}
+    <h1 class = "stylesTexte">Créer des outils et des applications informatiques pour les R&T</h1>
+    <div class = text-box>
+        <h1>AC13.01 Utiliser un système informatique et ses outils </h1>
+        <h2>Niveau d'acquisition :</h2>
+        <div class="badges-container">
+         <div class="difficulty-badge">
+             <div class="difficulty-circle">
+                 <span class="difficulty-number">4</span>
+                 <span class="difficulty-label">/4</span>
+             </div>
+             <div class="stars-container">
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+             </div>
+         </div>
+        </div>
+        <p>Document de preuve</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir le document de preuve
+            </button>
+        </div>
+        <p>Analyse Réflexives</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir l'Analyse Réflexives
+            </button>
+        </div>
+
+        </div>
+    </div>
+
+    <div class = text-box>
+        <h1>AC13.02 Lire, exécuter, corriger et modifier un programme </h1>
+        <h2>Niveau d'acquisition :</h2>
+        <div class="badges-container">
+         <div class="difficulty-badge">
+             <div class="difficulty-circle">
+                 <span class="difficulty-number">4</span>
+                 <span class="difficulty-label">/4</span>
+             </div>
+             <div class="stars-container">
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+             </div>
+         </div>
+        </div>
+        <p>Document de preuve</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir le document de preuve
+            </button>
+        </div>
+        <p>Analyse Réflexives</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir l'Analyse Réflexives
+            </button>
+        </div>
+
+        </div>
+    </div>
+    
+    <div class = text-box>
+        <h1>AC13.03 Traduire un algorithme, dans un langage et pour un environnement donné </h1>
+        <h2>Niveau d'acquisition :</h2>
+        <div class="badges-container">
+         <div class="difficulty-badge">
+             <div class="difficulty-circle">
+                 <span class="difficulty-number">4</span>
+                 <span class="difficulty-label">/4</span>
+             </div>
+             <div class="stars-container">
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+             </div>
+         </div>
+        </div>
+        <p>Document de preuve</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir le document de preuve
+            </button>
+        </div>
+        <p>Analyse Réflexives</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir l'Analyse Réflexives
+            </button>
+        </div>
+
+        </div>
+    </div>
+
+    <div class = text-box>
+        <h1>AC13.04 Connaître l’architecture et les technologies d’un site Web </h1>
+        <h2>Niveau d'acquisition :</h2>
+        <div class="badges-container">
+         <div class="difficulty-badge">
+             <div class="difficulty-circle">
+                 <span class="difficulty-number">4</span>
+                 <span class="difficulty-label">/4</span>
+             </div>
+             <div class="stars-container">
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+             </div>
+         </div>
+        </div>
+        <p>Document de preuve</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir le document de preuve
+            </button>
+        </div>
+        <p>Analyse Réflexives</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir l'Analyse Réflexives
+            </button>
+        </div>
+
+        </div>
+    </div>
+
+    <div class = text-box>
+        <h1>AC13.05 Choisir les mécanismes de gestion de données adaptés au développement de l’outil et argumenter ses choix </h1>
+        <h2>Niveau d'acquisition :</h2>
+        <div class="badges-container">
+         <div class="difficulty-badge">
+             <div class="difficulty-circle">
+                 <span class="difficulty-number">4</span>
+                 <span class="difficulty-label">/4</span>
+             </div>
+             <div class="stars-container">
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+             </div>
+         </div>
+        </div>
+        <p>Document de preuve</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir le document de preuve
+            </button>
+        </div>
+        <p>Analyse Réflexives</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir l'Analyse Réflexives
+            </button>
+        </div>
+
+        </div>
+    </div>
+
+    <div class = text-box>
+        <h1>AC13.06 S’intégrer dans un environnement propice au développement et au travail collaboratif</h1>
+        <h2>Niveau d'acquisition :</h2>
+        <div class="badges-container">
+         <div class="difficulty-badge">
+             <div class="difficulty-circle">
+                 <span class="difficulty-number">4</span>
+                 <span class="difficulty-label">/4</span>
+             </div>
+             <div class="stars-container">
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+                 <span class="star star-filled">★</span>
+             </div>
+         </div>
+        </div>
+        <p>Document de preuve</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir le document de preuve
+            </button>
+        </div>
+        <p>Analyse Réflexives</p>
+        <div class="doc-btn-container">
+            <button class="doc-btn">
+                <i class="fas fa-file-word"></i>
+                Cliquer ici pour voir l'Analyse Réflexives
+            </button>
+        </div>
+
+        </div>
+    </div>
+
+    <div class="page-center">
+        <div class = "grid-buttons">
+            <a class="btn" href={{ path ('Administrer') }}>Administrer</a>
+            <a class="btn" href={{ path ('Connecter') }}>Connecter</a>
+        </div>
+    </div>
 
 {% endblock %}

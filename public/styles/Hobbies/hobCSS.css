@@ -1,0 +1,49 @@
+.stylesTexte {
+  text-align: center; /*centre le texte horizontalement*/
+  text-shadow: 0 12px 14px rgba(41, 203, 221, 0.3); /*ombre*/
+  font-family: Georgia, serif;
+  font-size: 70px;
+  color: #ffffff;
+  padding: 40px;
+}
+
+.p1 {
+  list-style-position: inside;
+  text-align: center; /*centre le texte horizontalement*/
+  font-family: Georgia, serif;
+  font-size: 40px;
+  color: #548bbe;
+  padding: 20px;
+}
+
+.p {
+  list-style-position: inside;
+  text-align: center; /*centre le texte horizontalement*/
+  font-family: Georgia, serif;
+  font-size: 20px;
+  color: #aeb7c4;
+  padding: 10px;
+}
+
+.stylesTexte:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+.p1:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+.petite-image {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 15px;
+}
+
+.petite-image:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}

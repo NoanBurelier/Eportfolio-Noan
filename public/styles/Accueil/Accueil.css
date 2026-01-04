@@ -1,5 +1,3 @@
-
-
 /* ===== VARIABLES CSS ===== */
 :root {
   --primary-color: #048B9A;
@@ -25,9 +23,9 @@
 /* ===== GRILLE DE BOUTONS ===== */
 .grid-buttons {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  max-width: 1040px;
+  max-width: 1580px;
   margin: 0 auto;
 }
 
@@ -178,19 +176,10 @@
   background-repeat: no-repeat;
 }
 
-/* Bouton Contact */
-.btn-contact::after {
-  background-image: url('/styles/Accueil/Image/image contact.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 /* ===== EFFET DE SUPERPOSITION SUR LES IMAGES ===== */
 .btn-cv::after,
 .btn-competences::after,
-.btn-hobbie::after,
-.btn-contact::after {
+.btn-hobbie::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -206,10 +195,48 @@
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 1200px) {
+@media (max-width: 1600px) {
+  :root {
+    --button-width: 450px;
+    --button-height: 470px;
+  }
+  
+  .grid-buttons {
+    max-width: 1420px;
+  }
+}
+
+@media (max-width: 1400px) {
   :root {
     --button-width: 400px;
     --button-height: 420px;
+  }
+  
+  .grid-buttons {
+    max-width: 1280px;
+  }
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --button-width: 350px;
+    --button-height: 370px;
+  }
+  
+  .grid-buttons {
+    max-width: 1120px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .grid-buttons {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+  }
+  
+  :root {
+    --button-width: 380px;
+    --button-height: 400px;
   }
 }
 
@@ -245,7 +272,6 @@
     padding-top: 80px;
   }
 }
-
 
 .btn-ripple {
   position: relative;

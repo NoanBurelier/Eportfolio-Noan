@@ -1,5 +1,6 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Accueil{% endblock %}
 
 {% block stylesheets %}
     {{ parent() }}
@@ -20,7 +21,6 @@
             <a class="btn btn-cv" href={{ path ('CV') }} ></a>
             <a class="btn btn-competences" href={{ path ('compétences') }}></a>
             <a class="btn btn-hobbie" href={{ path ('hobbies') }}></a>
-            <a class="btn btn-contact" href={{ path ('Contact') }}></a>
         </div>
     </div>
 
